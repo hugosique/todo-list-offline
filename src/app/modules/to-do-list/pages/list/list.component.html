@@ -1,3 +1,4 @@
+@if(!getListItems().length) {
 <div class="container">
   <img
     src="assets/img/task-list-null.png"
@@ -10,6 +11,16 @@
     Crie uma lista de tarefas
   </button>
   } @else {
-    <app-input-add-item/>
+  <app-input-add-item
+    [inputListItems]="getListItems()"
+    (outputAddListItems)="getInputAndAddItem($event)"
+  />
   }
 </div>
+
+} @else {
+    <app-input-add-item
+    [inputListItems]="getListItems()"
+    (outputAddListItems)="getInputAndAddItem($event)"
+  />
+}

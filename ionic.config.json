@@ -1,0 +1,7 @@
+{
+  "name": "todo-list-offline",
+  "type": "angular-standalone",
+  "integrations": {
+    "capacitor": {}
+  }
+}

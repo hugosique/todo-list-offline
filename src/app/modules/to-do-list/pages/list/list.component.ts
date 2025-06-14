@@ -26,11 +26,25 @@ export class ListComponent {
 
   public getInputAndAddItem(value: IListItems) {
     localStorage.setItem(
-      '@my-list', 
+      '@my-list',
       JSON.stringify([...this.#setListItems(), value])
     );
 
     return this.#setListItems.set(this.#parseItems());
+  }
+
+  public listItemsStage(value: 'pending' | 'completed') {
+    return this.getListItems().filter((el: IListItems) => {
+      if (value === 'pending') {
+        return !el.checked;
+      };
+
+      if (value === 'completed') {
+        return el.checked;
+      };
+
+      return el;
+    });
   }
 
   public deleteAllItems() {

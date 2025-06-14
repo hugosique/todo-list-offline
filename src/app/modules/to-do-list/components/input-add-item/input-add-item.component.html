@@ -8,7 +8,7 @@
   }
   <div
     [ngClass]="{
-      container: !inputListItems.length
+      container: inputListItems.length
     }"
   >
     <label
@@ -25,6 +25,7 @@
         placeholder="Adicione um item"
         autofocus
         (keyup.enter)="focusAndAddItem(inputText.value)"
+        autocomplete="off"
       />
 
       <button

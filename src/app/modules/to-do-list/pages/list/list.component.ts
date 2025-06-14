@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 
 // Components
 import { InputAddItemComponent } from '../../components/input-add-item/input-add-item.component';
+import { InputListItemComponent } from '../../components/input-list-item/input-list-item.component';
 
 // Interfaces
 import { IListItems } from '../../interface/IListItems.interface';
@@ -9,7 +10,7 @@ import { IListItems } from '../../interface/IListItems.interface';
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [InputAddItemComponent],
+  imports: [InputAddItemComponent, InputListItemComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })

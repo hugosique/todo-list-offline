@@ -19,8 +19,13 @@
 </div>
 
 } @else {
-    <app-input-add-item
-    [inputListItems]="getListItems()"
-    (outputAddListItems)="getInputAndAddItem($event)"
-  />
+<app-input-add-item
+  [inputListItems]="getListItems()"
+  (outputAddListItems)="getInputAndAddItem($event)"
+/>
+
+<main class="container"></main>
+<footer>
+  <button class="btn btn-danger" (click)="deleteAllItems()">Deletar todos os items</button>
+</footer>
 }
